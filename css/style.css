@@ -1,0 +1,516 @@
+/* Import Google fonts
+ * ==================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+:root {
+	--yellow: #faba00;
+	--green: #275137;
+	--red: #b71a1f;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* navbar
+ * ==================================== */
+
+.navbar-brand {
+	height: auto;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #fff;
+	transition: all .3s;
+}
+
+.navbar-toggle:hover .navbar-toggle .icon-bar {
+	background-color: #ccc;
+}
+
+.bar-mid-x {
+    transform: scaleX(0);
+}
+
+.bar-top-x {
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar.bar-bot-x {
+    transform: rotate(-45deg);
+	margin-top: -8px;
+    margin-bottom: 6px;
+}
+
+/* btn hover effects */
+.btn {
+	background-color: hsl(1.8, 64.7%, 50%);
+	border-color: hsl(1.8, 64.7%, 50%);
+}
+
+.btn:hover {
+	color: hsl(0, 0%, 100%) !important;
+	border-color: hsl(0, 0%, 21.2%);
+	box-shadow: inset 0 -50px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+.btn:focus, .btn:active {
+	box-shadow: inset 0 -62px 0px hsla(0, 0%, 0%, 0.5);
+	color: hsl(0, 0%, 100%) !important;
+}
+
+/* #devices
+* ==================================== */
+
+#devices {
+	text-align: center;
+	background-color: hsl(0, 0%, 20%);
+	padding-top: 35px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.flashing-top,
+.flashing-bottom {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+
+.device-1 .flashing-top {
+	top: 16px;
+	background-color: transparent;
+	height: 32px;
+}
+
+.device-2 .flashing-top {
+	top: 51px;
+	background-color: transparent;
+	height: 32px;
+}
+
+.device-2 .flashing-top .time {
+	top: 18px;
+	right: 7px;
+	left: initial;
+	color: white;
+	font-size: 10px;
+}
+
+.device-3 .flashing-top {
+	top: 50px;
+	background-color: transparent;
+	height: 35px;
+}
+
+.device-3 .flashing-top .time {
+	top: initial;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	font-size: 10px;
+}
+
+.device-wrap {
+	width: 320px;
+	height: 600px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	position: relative;
+	background-size: contain;
+	display: inline-block;
+	margin: 0;
+}
+
+.device-wrap-1 {
+	background: url(../img/iphone-x-portrait.png) top center no-repeat;
+	background-size: contain;
+}
+
+.device-wrap-bg {
+	position: relative;
+	margin: 0 20px;
+	display: inline-block;
+}
+
+.device-wrap-bg-1 {
+	width: 320px;
+}
+
+.device-wrap-bg::before {
+	content: "";
+	position: absolute;
+	top: 16px;
+	left: 28px;
+	height: 36px;
+	width: 264px;
+	background-color: white;
+}
+
+.device-wrap-2 {
+	background: url(../img/android-pixel-2-portrait.png) top center no-repeat;
+	background-size: contain;
+}
+
+.device-wrap-3 {
+	background: url(../img/iphone-6-portrait.png) top center no-repeat;
+	background-size: contain;
+}
+
+#devices .device {
+	margin: 0 auto;
+	position: relative;
+	width: 260px;
+	height: 100%;
+	background-size: contain;
+}
+
+.device {
+	padding: 48px 0 76px 0;
+}
+
+.device-2,
+.device-3 {
+	padding-top: 84px;
+}
+
+.time {
+	color: #979797;
+	position: absolute;
+	left: 18px;
+	display: block;
+	top: 10px;
+	font-family: "SF UI Text", helvetica, arial, sans-serif;
+	/* width: 80px; */
+	text-align: center;
+	font-size: 12px;
+}
+
+#devices iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: 1px solid #d1d1d1;
+}
+
+/* find a restaurant
+* ==================================== */
+
+#restaurant-body {
+	overflow: hidden;
+}
+
+.app-section {
+	width: 100%;
+	height: 100vh;
+	font-family: "Poppins", sans-serif;
+	background-color: var(--yellow);
+	padding-top: 60px;
+	transform: translateX(100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .5s ease-out;
+}
+
+#start-screen {
+	transform: translateX(0%);
+}
+
+.btn-start {
+	text-transform: uppercase;
+
+}
+
+.logo-container {
+	width: 140px;
+	position: fixed;
+	left: 50%;
+	top: 64%;
+	z-index: 999;
+	transform: translateX(-50%);
+	transition: all .5s ease-out;
+}
+
+.logo-container-small {
+	width: 40px;
+	left: 35px;
+	top: 12px;
+}
+
+.section-title {
+	font-weight: 500;
+	text-align: center;
+	margin: 0;
+	color: var(--red);
+	font-size: 30px;
+}
+
+.section-title::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--red);
+	margin: 25px 0;
+}
+
+.btn {
+	background-color: var(--green);
+	color: #fff;
+	display: block;
+	border: none;
+	width: 100%;
+	border-radius: 30px;
+	margin: 20px auto;
+	padding: 8px 0;
+	font-size: 20px;
+}
+
+.r-name {
+	margin-bottom: 0;
+	font-size: 20px;
+}
+
+.btn-r {
+	background-color: white;
+	text-align: left;
+	border: 4px solid var(--green);
+	border-radius: 8px;
+	color: var(--green);
+	padding: 6px;
+	margin: 12px auto;
+	font-size: 16px;
+}
+
+.btn-r:hover {
+	color: var(--green) !important;
+	background-color: hsl(0, 0%, 100%);
+	box-shadow: none;
+	border: 4px solid var(--red);
+}
+
+.btn-r:focus, .btn-r:active {
+	color: var(--green) !important;
+	background-color: hsl(0, 0%, 100%);
+	box-shadow: none;
+	border: 4px solid var(--red);
+}
+
+.rating {
+	/* margin-top: -2px; */
+}
+
+.img-star {
+	width: 14px;
+	height: auto;
+}
+
+.mapouter {
+	position: relative;
+	text-align: right;
+	height: 300px;
+	width: 100%;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+/* scratchcard
+* ==================================== */
+
+.app-section-scratchcard {
+	transform: translateX(0);
+	background-image: linear-gradient(darkblue, blue);
+}
+
+.title-scratchcard {
+	color: bisque;
+}
+
+.coupon-container {
+	height: 100%;
+	position: relative;
+}
+
+.btn-coupon {
+	cursor: pointer;
+	border-radius: 1px;
+	padding: 0;
+	width: 60%;
+	background-color: none;
+	color: brown;
+	transition: all 300ms cubic-bezier(.65,.05,.38,1.34);
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translateX(142%);
+	height: 100px;
+}
+
+.btn-coupon-overlay {
+	content: "Coupon";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	opacity: .3;
+}
+
+.hide {
+	display: none;
+}
+
+.btn-coupon:hover {
+	background-color: none;
+	color: brown;
+	box-shadow: none;
+}
+
+.btn-coupon-1 {
+	top: 0px;
+}
+
+.btn-coupon-2 {
+	top: 110px;
+}
+
+.btn-coupon-3 {
+	top: 220px;
+}
+
+.move-out {
+	transform: translateX(0%);
+}
+
+.focus-coupon {
+	transform: scale(1.6, 1.6) translateX(0%);
+	top: 100px;
+}
+
+.scratch_container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1024px;
+  }
+  
+  .scratch_viewport {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	z-index: 0;
+  }
+  
+  .scratch_picture-under {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	z-index: -1;
+	max-height: 100px;
+	width: auto;
+  }
+  
+  .scratch_container canvas {
+	position: relative;
+	width: 250px;
+	height: 100px;
+	z-index: 1;
+  }
+
+/* MEDIA QUERIES DESKTOP-FIRST
+ * ==================================== */
+
+/* Large devices (desktops, less than 1200px) */
+@media ( max-width : 1199px ) {
+
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media ( max-width : 991px ) {
+
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media ( max-width : 767px ) {
+
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media ( max-width : 575px ) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media ( max-width : 480px ) {
+
+
+}
+
+/* Custom, iPhone Retina */
+@media (max-width : 320px) {
+
+
+}
+
+
+/* Media Queries Mobile-First
+ * ==================================== */
+
+/* Custom, iPhone Retina */
+@media ( min-width : 360px ) {
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media ( min-width : 480px ) {
+
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media ( min-width : 576px ) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media ( min-width : 768px ) {
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media ( min-width : 992px ) {
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media ( min-width : 1200px ) {
+
+
+}

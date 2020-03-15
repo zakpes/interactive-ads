@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' /><![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+    <title>Interactive Ads</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="restaurant-body">
+        <div class="logo-container">
+                <img class="img-fluid img-logo" src="img/logo-2.svg" alt="logo">
+
+            </div>
+    <section id="start-screen" class="app-section">
+        <div class="container">
+            <h1 class="section-title">Find cool restaurants near you!</h1>
+            <button class="btn btn-start" type="button" name="-start">Start</button>
+
+        </div>
+    </section><!-- /#start-screen -->
+
+    <!-- SECTION -->
+    <section id="pick-food" class="app-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="section-title">What's your favorite food?</h1>
+                    <button class="btn btn-italian" type="button" name="btn-italian">Italian</button>
+                    <button class="btn btn-mexican" type="button" name="btn-mexican">Mexican</button>
+                    <button class="btn btn-chinese" type="button" name="btn-chinese">Chinese</button>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /#pick-food -->
+
+    <!-- SECTION -->
+    <section id="pick-money" class="app-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="section-title">How much do you plan to spend?</h1>
+                    <button class="btn btn-dollar btn-dollar-1" type="button" name="btn-dollar-1">$10-$20</button>
+                    <button class="btn btn-dollar btn-dollar-2" type="button" name="btn-dollar-2">$20-$50</button>
+                    <button class="btn btn-dollar btn-dollar-3" type="button" name="btn-dollar-3">$50+</button>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /#pick-food -->
+
+    <!-- SECTION -->
+    <section id="pick-restaurant" class="app-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="section-title">Here are some restaurants near you:</h1>
+                    <button class="btn btn-r btn-r-1" type="button" name="btn-restaurant-1">
+                        <div class="r-name-container">
+                                <h3 class="r-name">Giusepe's</h3>
+                                <div class="rating">
+                                    <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                                    <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                                    <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                                    <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                                    <img class="img-fluid img-star" src="img/star-empty.png" alt="">
+                                </div>
+                        </div>
+
+                    </button>
+                    <button class="btn btn-r btn-r-2" type="button" name="btn-restaurant-2">
+                        <h3 class="r-name">Little Italy</h3>
+                        <div class="rating">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-empty.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-empty.png" alt="">
+                        </div>
+                    </button>
+                    <button class="btn btn-r btn-r-3" type="button" name="btn-restaurant-3">
+                        <h3 class="r-name">Monza</h3>
+                        <div class="rating">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                            <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                        </div>
+                    </button>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /#pick-food -->
+
+    <!-- SECTION -->
+    <section id="location" class="app-section">
+        <div class="container">
+            <div class="location-r-container">
+                <!-- <button class="btn btn-r btn-r-3" type="button" name="btn-restaurant-3">
+                    <h3 class="r-name">Monza</h3>
+                    <div class="rating">
+                        <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                        <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                        <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                        <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                        <img class="img-fluid img-star" src="img/star-full.png" alt="">
+                    </div>
+                </button> -->
+                
+            </div>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="296" id="gmap_canvas_la" src="https://maps.google.com/maps?q=edsel%20road%2C%20los%20angeles&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </section><!-- /#pick-food -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/restaurant.js"></script>
+
+</body>
+
+</html>
