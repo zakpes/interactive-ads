@@ -1,71 +1,47 @@
 const couponArr = document.querySelectorAll(".btn-coupon");
-const overlayArr = document.querySelectorAll(".btn-coupon-overlay");
+const removedCouponArr = document.querySelectorAll(".focus-coupon");
+const overlayArr = document.querySelectorAll(".scratchcard-overlay");
+
 couponArr.forEach( (el) => {
     el.addEventListener("click", (event) => {
-        couponArr.forEach((coupon) => {coupon.classList.remove("move-out")});
-        
-            event.currentTarget.classList.add("focus-coupon");
-            overlayArr.forEach((overlay) => {
-                overlay.classList.add("hide");
-            })
-            // event.currentTarget.innerHTML = '<div class="scratch_container"><div class="scratch_viewport"><canvas id="js-scratch-canvas"></canvas></div></div>';
-    })
-})
+        console.log({removedCouponArr});
+        event.currentTarget.classList.remove("focus-coupon");
 
-// scratchcard
-var scratch = new Scratch({
-    canvasId: 'js-scratch-canvas-1',
-    imageBackground: 'img/scratchcard.png',
-    pictureOver: 'img/foreground.jpg',
-    cursor: {
-        png: '',
-        cur: '',
-        x: '20',
-        y: '17'
-    },
-    radius: 20,
-    nPoints: 100,
-    percent: 50,
-    callback: function () {
-      alert('I am Callback.');
-    },
-    pointSize: { x: 3, y: 3}
+        couponArr.forEach( (el) => {
+            
+            if (el.classList.contains("focus-coupon")) {
+                el.classList.add("animate__fadeOutLeft");
+            }
+        })
+
+        overlayArr.forEach(overlay => overlay.classList.add("d-none"));
+    });
 });
-// scratchcard
-var scratch = new Scratch({
-    canvasId: 'js-scratch-canvas-2',
-    imageBackground: 'img/scratchcard.png',
-    pictureOver: 'img/foreground.jpg',
-    cursor: {
-        png: '',
-        cur: '',
-        x: '20',
-        y: '17'
-    },
-    radius: 20,
-    nPoints: 100,
-    percent: 50,
-    callback: function () {
-      alert('I am Callback.');
-    },
-    pointSize: { x: 3, y: 3}
-});
-// scratchcard
-var scratch = new Scratch({
-    canvasId: 'js-scratch-canvas-3',
-    imageBackground: 'img/scratchcard.png',
-    pictureOver: 'img/foreground.jpg',
-    cursor: {
-        png: '',
-        cur: '',
-        x: '20',
-        y: '17'
-    },
-    radius: 20,
-    nPoints: 100,
-    percent: 50,
-    callback: function () {
-      alert('I am Callback.');
-    },
-    pointSize: { x: 3, y: 3}
-});
+
+// couponArr.forEach( function(el) {
+//     el.addEventListener("click", function(event, callback) {
+//         event.currentTarget.classList.remove("focus-coupon");
+//         overlayArr.forEach(overlay => overlay.classList.add("d-none"));
+        
+//         function () {
+//             removedCouponArr.forEach((coupon) => {coupon.classList.add("animate__fadeOutLeft")});
+//         }
+//     })
+// })
+
+// couponArr.forEach(function(item) {
+//     item.addEventListener("click", function() {
+//         console.log("Clicked!");
+//     });
+// });
+
+// for (let i = 0; i < overlayArr.length; i++) {
+//     overlayArr[i].addEventListener("click", function() {
+//         console.log("CLICKY");
+//     })
+    
+// }
+
+// overlayArr.addEventListener("click", function() {
+//     console.log("CLIZK");
+// })

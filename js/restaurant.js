@@ -41,13 +41,7 @@ btnRestaurantArr.forEach(function(el) {
         let restaurant = event.currentTarget.outerHTML;
         
         locationRContainer.innerHTML = restaurant;
-        // if (this.event.currentTarget == btnRestaurantArr[0]) {
-        //     locationRContainer.innerHTML = restaurant;
-        // } else if (this.event.currentTarget == btnRestaurantArr[1]) {
-        //     locationRContainer.innerHTML = "<h2>bunny business</h2>";
-        // } else if (this.event.currentTarget == btnRestaurantArr[2]) {
-        //     locationRContainer.innerHTML = "<h2>horse business</h2>";
-        // }
+        
         slideInSection(sectionLoc);
     })
 })

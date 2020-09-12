@@ -46,8 +46,8 @@ var Scratch = (function () {
       imageBackground: '', // Path [src]
       pictureOver: '', // Path [src]
 			cursor: this.cursor, // Custom pointer
-      sceneWidth: 250, // Canvas width
-      sceneHeight: 250, // Canvas height
+      sceneWidth: 211, // Canvas width
+      sceneHeight: 211, // Canvas height
       radius: 40, // Radius of scratch zone
       nPoints: 10, // n points for clear canvas
 			pointSize: this.pointSize,
